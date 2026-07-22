@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { Scissors, LogIn, MoonStar } from "lucide-react";
+import { Scissors, LogIn, MoonStar, MessageCircle } from "lucide-react";
 import type { Appointment } from "@/lib/salon";
 import {
   fetchPublicBookedSlots,
@@ -68,6 +68,15 @@ function Landing() {
             </h1>
             <p className="text-xs text-muted-foreground font-medium">الأوقات المتاحة اليوم</p>
           </div>
+          <a
+            href="https://wa.me/963932544958"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-[#25D366] text-white px-2 sm:px-3 h-9 text-xs font-medium shadow hover:bg-[#1da851] transition-colors"
+          >
+            <MessageCircle className="h-4 w-4 shrink-0" />
+            <span className="whitespace-nowrap">احجز عبر واتساب</span>
+          </a>
           <ThemeToggle />
           <Link
             to="/auth"
@@ -104,6 +113,16 @@ function Landing() {
         <p className="text-center text-xs text-muted-foreground pt-4">
           تُعرض الأوقات الفارغة فقط. للحجز، تواصل مباشرة مع الصالون.
         </p>
+        <a
+          href="https://wa.me/963932544958"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex mx-auto w-auto min-w-[50px] h-[50px] items-center justify-center gap-2 rounded-full bg-[#25D366] text-white px-4 text-sm font-medium shadow hover:bg-[#1da851] transition-colors"
+          title="احجز عبر واتساب"
+        >
+          <MessageCircle className="h-5 w-5 shrink-0" />
+          <span className="whitespace-nowrap">احجز عبر واتساب</span>
+        </a>
       </main>
     </div>
   );
